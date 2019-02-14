@@ -42,4 +42,12 @@ body {
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
+
+  transition: background-color 0.2s ease-out;
+}
+
+.todoListMain .theList li:hover {
+  background-color: rgb(255, 111, 111);
+  color: white;
+  cursor: pointer;
 }
