@@ -17,7 +17,7 @@ class TodoList extends Component {
 
     var itemArray = this.state.items;
 
-    if (this._inputElement !== "") {
+    if (this._inputElement.value !== "") {
       itemArray.unshift({
         text: this._inputElement.value,
         key: Date.now()
