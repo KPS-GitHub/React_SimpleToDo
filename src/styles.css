@@ -8,3 +8,38 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.todoListMain .header input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #fff;
+  width: 165px;
+}
+
+.todoListMain .header button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  margin-right: 0px;
+  background-color: #49c0fc;
+  color: #fff;
+  border: 2px solid rgb(202, 222, 252);
+}
+
+.todoListMain .header button:hover {
+  background-color: #00000056;
+}
+
+.todoListMain .theList {
+  list-style: none;
+  padding-left: 0;
+  width: 250px;
+}
+
+.todoListMain .theList li {
+  color: #005e8d;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
