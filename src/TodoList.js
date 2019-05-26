@@ -14,8 +14,10 @@ class TodoList extends Component {
   }
 
   addItem(e) {
-    e.preventDefault();
+    e.preventDefault(); // function is run upon form submission
 
+    /* placeholder array - can be adjusted and 
+    then the state array will be redefined with it */
     var itemArray = this.state.items;
 
     if (this._inputElement.value !== "") {
@@ -31,7 +33,6 @@ class TodoList extends Component {
       this._inputElement.value = "";
     }
 
-    console.log(itemArray);
   }
 
   deleteItem(key) {
@@ -49,7 +50,9 @@ class TodoList extends Component {
         <div className="header">
           <form onSubmit={this.addItem}>
             <input
-              ref={a => (this._inputElement = a)}
+              /* ref targets input field so we can
+               pull the text that it contains */
+              ref={el => (this._inputElement = el)} 
               placeholder="enter task"
             />
             <button type="submit">add</button>

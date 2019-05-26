@@ -21,12 +21,18 @@ class TodoItems extends Component {
   }
 
   render() {
+    // access "entries" array, found in state in TodoList.js
     var todoEntries = this.props.entries;
+    /* map through that array, running createTasks() 
+    with each entry, creating the to-do list that will 
+    be imported and included in the TodoList.js component */
     var listItems = todoEntries.map(this.createTasks);
 
     return (
       <ul className="theList">
-        <FlipMove duration={250} easing="ease-out">
+        {/* simple animation wrapper - elements/components (list items) \
+        will be created/destroyed with a smooth animation */}
+        <FlipMove duration={750} easing="ease-out">
           {listItems}
         </FlipMove>
       </ul>
